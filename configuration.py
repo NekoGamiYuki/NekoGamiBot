@@ -27,8 +27,7 @@ def create_config():
                           "NICK=YOUR_BOT_NICK_HERE\n"
                           "OAUTH=YOUR_OAUTH_HERE (Generate one here: https://twitchapps.com/tmi/)\n"
                           "CHANNELS=CHANNEL1, CHANNEL2, ETC...\n"
-                          "CHAT_RATE=100\n"
-                          "ALLOW_CHATTING=True\n")
+                          "CHAT_RATE=100\n")
         config_file.close()
         return 0
     except:
