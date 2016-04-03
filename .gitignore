@@ -1,3 +1,8 @@
+# Config file and emacs autosaves/revory stuff
+config
+*#*
+*~*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
