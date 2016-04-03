@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# NekoGamiBot
+# NekoGamiBot (VERSION: 0.1.0)
 #
 # Created by NekoGamiYuki
 #
@@ -18,6 +18,7 @@ import socket #For the actual connection to twitch and network communication!
 import time #For the sleep function and seeing how much time has passed
 import configuration as config #Managing bot configuration
 import communication as comm #So that we can communicate with twitch/twitch chat
+import users # User management
 
 #-------------------------------------------------------------------------------
 
@@ -64,6 +65,10 @@ print("Finished joining channels.")
 #Getting Chat Messages and Twitch Information-----------------------------------
 while True:
     response = sock.recv(1024)
-    print(response.decode())
+    user = users.User(response.decode())
+    print(user.get_name())
+    print(user.get_message())
+    print(user.get_channel_from())
 
+        
     time.sleep(0.01) #Receive 100 responses from twitch per minute.
