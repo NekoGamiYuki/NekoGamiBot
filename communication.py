@@ -36,8 +36,8 @@ def chat(message, chan, sock):
     global TIME_ELAPSED
     
     TIME_ELAPSED = time.time() - PREVIOUS_MESSAGE_TIME
-
-    if TIME_ELAPSED > (1.0/float((config.options["CHAT_RATE"]))) and ALLOW_CHATTING == True:
+    print(TIME_ELAPSED)
+    if TIME_ELAPSED > (1.0/float(config.options["CHAT_RATE"])) and ALLOW_CHATTING == True:
         final_message = "PRIVMSG #%s :%s\r\n" %(chan, message)
         sock.sendto(final_message.encode(), (config.options["HOST"], int(config.options["PORT"])))
     else:
