@@ -24,7 +24,7 @@ def create_config():
         config_file = open("config",'w')
         config_file.write("HOST=irc.twitch.tv\n"
                           "PORT=6667\n"
-                          "NICK=YOUR_BOT_NICK_HERE\n"
+                          "NICK=YOUR_BOT_USERNAME_HERE\n"
                           "OAUTH=YOUR_OAUTH_HERE (Generate one here: https://twitchapps.com/tmi/)\n"
                           "CHANNELS=CHANNEL1, CHANNEL2, ETC...\n"
                           "CHAT_RATE=100\n")
